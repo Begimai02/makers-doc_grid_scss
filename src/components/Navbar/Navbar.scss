@@ -1,0 +1,66 @@
+@import '../../assets/variables/Variables.scss';
+
+.navbar{
+    padding: 10px 0;
+    background-color: $backgroundColor;
+    font-family: $latoFont;
+
+    .nav{
+        height: 60px;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        color: #fff;
+    }
+}
+
+.nav-left{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-content: center;
+
+    span{
+        margin-top: 6px;
+        font-family: $latoFont;
+        color: $blueColor;
+    }
+}
+
+.nav-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    
+    .nav-list{
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-item{
+            cursor: pointer;
+            
+            &:hover{
+                color: $darkBlue
+            }
+        }
+
+        @media all and(max-width: 850px){
+            display: none
+        }
+    }
+
+    .nav-btn{
+        display: none;
+
+        img{
+            width: 30px;
+            margin-top: 8px;
+        }
+        
+        @media all and(max-width: 850px){
+            display: block
+        }
+    }
+}
